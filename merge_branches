@@ -1,0 +1,59 @@
+vinhlx@MacBookPro ibm_devops % git branch
+* main
+vinhlx@MacBookPro ibm_devops % git branch -r 
+  origin/HEAD -> origin/main
+  origin/bug-fix-typo
+  origin/main
+vinhlx@MacBookPro ibm_devops % git checkout bug-fix-typo 
+branch 'bug-fix-typo' set up to track 'origin/bug-fix-typo'.
+Switched to a new branch 'bug-fix-typo'
+vinhlx@MacBookPro ibm_devops % vi README.md
+vinhlx@MacBookPro ibm_devops % git add .
+vinhlx@MacBookPro ibm_devops % git commit -m "add README.md file" 
+Author identity unknown
+
+*** Please tell me who you are.
+
+Run
+
+  git config --global user.email "you@example.com"
+  git config --global user.name "Your Name"
+
+to set your account's default identity.
+Omit --global to set the identity only in this repository.
+
+fatal: unable to auto-detect email address (got 'vinhlx@Les-MacBook-Pro.(none)')
+vinhlx@MacBookPro ibm_devops % git config --global user.email "vinhlx90@icloud.com"
+vinhlx@MacBookPro ibm_devops % git config --global user.name "vinhlx90github"           
+vinhlx@MacBookPro ibm_devops % git púsh 
+git: 'púsh' is not a git command. See 'git --help'.
+
+The most similar command is
+	push
+vinhlx@MacBookPro ibm_devops % git push 
+Username for 'https://github.com': vinhlx90github
+Password for 'https://vinhlx90github@github.com': 
+remote: Invalid username or token. Password authentication is not supported for Git operations.
+fatal: Authentication failed for 'https://github.com/vinhlx90github/ibm_devops.git/'
+vinhlx@MacBookPro ibm_devops % git push
+ERROR: Repository not found.
+fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
+vinhlx@MacBookPro ibm_devops % git branch
+* bug-fix-typo
+  main
+vinhlx@MacBookPro ibm_devops % git push  
+Everything up-to-date
+vinhlx@MacBookPro ibm_devops % git checkout main
+A	README.md
+Switched to branch 'main'
+Your branch is up to date with 'origin/main'.
+vinhlx@MacBookPro ibm_devops % git merge bug-fix-typo
+Already up to date.
+vinhlx@MacBookPro ibm_devops % ls
+LICENSE		README.md
+vinhlx@MacBookPro ibm_devops % cat README.md 
+     1	test merge branch
+
